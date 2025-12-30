@@ -1,30 +1,31 @@
-import time
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-
-# ====== НАСТРОЙКИ ======
-# Измените эту ссылку на нужную вам
-TARGET_URL = "https://vk.com/wall-207959790_83204"
-DURATION_HOURS = 6
-# =======================
-
-print(f"Запускаю headless браузер...")
-print(f"URL: {TARGET_URL}")
-print(f"Время: {DURATION_HOURS} часов")
-
-options = Options()
-options.add_argument("--headless")
-options.add_argument("--no-sandbox")
-options.add_argument("--mute-audio")
-options.add_argument("--window-size=1920,1080")
-
-driver = webdriver.Chrome(options=options)
-driver.get(TARGET_URL)
-
-print(f"Открыто: {driver.title}")
-print(f"Работаю {DURATION_HOURS} часов...")
-
-time.sleep(DURATION_HOURS * 3600)
-
-driver.quit()
-print("Готово!")
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <!-- Мгновенный редирект -->
+    <meta http-equiv="refresh" content="0; url=https://vk.com/wall-207959790_83204">
+    
+    <!-- Или с задержкой -->
+    <!-- <meta http-equiv="refresh" content="3; url=https://vk.com/wall-207959790_83204"> -->
+    
+    <!-- Для SEO -->
+    <link rel="canonical" href="https://vk.com/wall-207959790_83204">
+</head>
+<body>
+    <script>
+        // Немедленный редирект через JavaScript
+        window.location.href = "https://vk.com/wall-207959790_83204";
+        
+        // Если нужно показать сообщение:
+        // document.body.innerHTML = "<h1>Перенаправление...</h1>";
+        // setTimeout(() => {
+        //     window.location.href = "https://vk.com/wall-207959790_83204";
+        // }, 3000);
+    </script>
+    
+    <!-- Fallback для старых браузеров -->
+    <noscript>
+        <p>Ваш браузер не поддерживает JavaScript. Нажмите <a href="https://vk.com/wall-207959790_83204">здесь</a> для перехода.</p>
+    </noscript>
+</body>
+</html>
